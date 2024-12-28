@@ -52,7 +52,11 @@ export function TeamSorter({
           <Label htmlFor="players">Lista de Jogadores</Label>
           <Textarea
             id="players"
-            placeholder="Cole ou digite a lista de jogadores&#10;1. João&#10;2. Pedro&#10;3. Victor"
+            placeholder={`Cole ou digite o nome dos jogadores. Ex:
+Joao            
+Pedro
+Victor...
+            `}
             value={playersList}
             onChange={(e) => setPlayersList(e.target.value)}
             className="min-h-[120px]"

@@ -10,6 +10,7 @@ interface PlayerListProps {
 }
 
 export function PlayerList({ players, onRemovePlayer }: PlayerListProps) {
+  if (players.length === 0) return <></>
   return (
     <ScrollArea className="h-[200px] rounded-md border p-2">
       {players.map((player, index) => (

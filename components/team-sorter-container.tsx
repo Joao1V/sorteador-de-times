@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users } from "lucide-react";
 import { useTeams } from "@/hooks/use-teams";
+import {TutorialContent} from "@/features/tutorial/tutorial-content";
 
 export function TeamSorterContainer() {
   const [playersPerTeam, setPlayersPerTeam] = useState(6);
@@ -14,7 +15,8 @@ export function TeamSorterContainer() {
 
   return (
     <div className="max-w-md mx-auto space-y-4">
-      <Card>
+      <Card className={"relative"}>
+        <TutorialContent />
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Users className="h-6 w-6" />
